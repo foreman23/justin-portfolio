@@ -7,7 +7,7 @@ const Navbar = () => {
                 <p>Justin Zhao</p>
             </div>
 
-            <div className='navbar-icons'>
+            <div className='navbar-icons hidedesktop'>
                 <img alt='email' className='navbar-email-icon' src='./icons/envelope.png'></img>
                 <img alt='instagram' className='navbar-ig-icon' src='./icons/instagram.png'></img>
             </div>
