@@ -88,8 +88,8 @@ const Home = () => {
                         }
                         <p className={`category-title ${category === 'about' ? 'category-selected' : ''}`} onClick={() => changeCategory('about')}>about</p>
                         <div className='navbar-icons-lg'>
-                            <img alt='email' className='navbar-email-icon' src='./icons/envelope.png'></img>
-                            <img alt='instagram' className='navbar-ig-icon' src='./icons/instagram.png'></img>
+                            <a href='mailto:justinzhao1999@gmail.com'><img alt='email' className='navbar-email-icon' src='./icons/envelope.png'></img></a>
+                            <a href='https://www.instagram.com/justinzzhao/'><img alt='instagram' className='navbar-ig-icon' src='./icons/instagram.png'></img></a>
                         </div>
                     </div>
 
