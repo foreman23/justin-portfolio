@@ -1,24 +1,26 @@
 import React from 'react'
+import { photos } from '../data/photos'
 
-const Photography = () => {
+const Photography = (props) => {
 
-    const projects = [
-        {
-            'title': 'Photo project name',
-        },
-        {
-            'title': 'Photo project name',
-        },
-        {
-            'title': 'Photo project name',
-        }
-    ]
-
+    const projectIndex = props.projectIndex
+    
     return (
-        <div className='photography-container'>
-            {projects.map((item, index) => (
-                <p key={`project_${index}`}>{item.title}</p>
-            ))}
+        <div>
+
+            {/* Mobile */}
+            <div className='photography-container hidedesktop'>
+                {photos.map((item, index) => (
+                    <p key={`project_${index}`}>{item.title}</p>
+                ))}
+            </div>
+            {/* Desktop */}
+            <div className='personal-container-lg hidemobile'>
+                {projectIndex !== undefined &&
+                    <img alt={`photoproject_${projectIndex}_img`} src={photos[projectIndex].url}></img>
+                }
+            </div>
+
         </div>
     )
 }

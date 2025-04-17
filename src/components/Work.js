@@ -1,7 +1,7 @@
 import React from 'react'
-import { projects } from '../data/projects'
+import { works } from '../data/works'
 
-const Personal = (props) => {
+const Work = (props) => {
 
     const projectIndex = props.projectIndex
 
@@ -10,14 +10,14 @@ const Personal = (props) => {
 
             {/* Mobile */}
             <div className='personal-container hidedesktop'>
-                {projects.map((item, index) => (
+                {works.map((item, index) => (
                     <p key={`project_${index}`}>{item.title}</p>
                 ))}
             </div>
             {/* Desktop */}
             <div className='personal-container-lg hidemobile'>
                 {projectIndex !== undefined &&
-                    <iframe src={projects[projectIndex].url} title={projects[projectIndex].title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <img alt={`workproject${projectIndex}_img`} src={works[projectIndex].url}></img>
                 }
             </div>
 
@@ -25,4 +25,4 @@ const Personal = (props) => {
     )
 }
 
-export default Personal
+export default Work
