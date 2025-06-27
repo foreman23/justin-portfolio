@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ category, setCategory }) => {
     return (
         <div className='navbar-container'>
             <div>
-                <p>Justin Zhao</p>
+                <p className={`justin-title ${category === 'slides' ? 'justin-selected' : ''}`} onClick={() => setCategory('slides')}>Justin Zhao</p>
             </div>
 
             <div className='navbar-icons hidedesktop'>

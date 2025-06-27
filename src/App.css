@@ -82,7 +82,7 @@ body {
 }
 
 .personal-container-lg {
-  width: 80vw;
+  width: 70vw;
   display: flex;
   /* border: 1px solid orange; */
 }
@@ -138,14 +138,14 @@ body {
 }
 
 #about-headshot {
-  width: 350px;
+  width: 475px;
   margin: auto;
   margin-top: 10%;
 }
 
 .category-container-lg {
   padding-left: 5%;
-  width: 20vw;
+  width: 30vw;
   /* border: 1px solid red; */
   color: white;
 }
@@ -225,9 +225,25 @@ body {
   cursor: pointer;
 }
 
+.category-title:hover {
+  font-weight: bold;
+}
+
 .category-selected {
   font-weight: bold;
   margin-bottom: 0;
+}
+
+.justin-title {
+  cursor: pointer;
+}
+
+.justin-title:hover {
+  font-weight: bold;
+}
+
+.justin-selected {
+  font-weight: bold;
 }
 
 .about-container img {

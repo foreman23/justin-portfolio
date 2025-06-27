@@ -6,10 +6,10 @@ import { projects } from '../data/projects'
 import { photos } from '../data/photos'
 import { works } from '../data/works'
 import Work from '../components/Work'
+import Slides from '../components/Slides'
 
-const Home = () => {
+const Home = ({ category, setCategory }) => {
 
-    const [category, setCategory] = useState('personal');
     const [currProject, setCurrProject] = useState(0);
     const [currWorkProject, setCurrWorkProject] = useState(0);
     const [currPhotoProject, setCurrPhotoProject] = useState(0);
@@ -94,6 +94,9 @@ const Home = () => {
                     </div>
 
                     <div>
+                        {category === 'slides' &&
+                            <Slides projectIndex={2}></Slides>
+                        }
                         {category === 'personal' &&
                             <Personal projectIndex={currProject}></Personal>
                         }
