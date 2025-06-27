@@ -30,17 +30,5 @@ export const works = [
     {
         'title': 'Work Project Name',
         'url': 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e',
-    },
-    {
-        'title': 'Work Project Name',
-        'url': 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f',
-    },
-    {
-        'title': 'Work Project Name',
-        'url': 'https://images.unsplash.com/photo-1517841905240-472988babdf9',
-    },
-    {
-        'title': 'Work Project Name',
-        'url': 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d',
-    },
+    }
 ];
