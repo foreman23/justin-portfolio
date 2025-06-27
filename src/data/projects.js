@@ -1,46 +1,46 @@
 export const projects = [
     {
-        'title': 'reel',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Nature Documentary',
+        'url': 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Tech Review',
+        'url': 'https://www.youtube.com/embed/jNQXAC9IVRw',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Travel Vlog',
+        'url': 'https://www.youtube.com/embed/oHg5SJYRHA0',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Cooking Tutorial',
+        'url': 'https://www.youtube.com/embed/ZZ5LpwO-An4',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Music Performance',
+        'url': 'https://www.youtube.com/embed/kJQP7kiw5Fk',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Art Timelapse',
+        'url': 'https://www.youtube.com/embed/2vjPBrBU-TM',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Fitness Workout',
+        'url': 'https://www.youtube.com/embed/YbJOTdZBX1g',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Gaming Highlights',
+        'url': 'https://www.youtube.com/embed/hFZFjoX2cGg',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Educational Content',
+        'url': 'https://www.youtube.com/embed/wJWksPWDKOc',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Comedy Sketch',
+        'url': 'https://www.youtube.com/embed/astISOttCQ0',
     },
     {
-        'title': 'video title',
-        'url': 'https://www.youtube.com/embed/l4_MMx69qzM',
+        'title': 'Product Demo',
+        'url': 'https://www.youtube.com/embed/V-_O7nl0Ii0',
     },
 ];

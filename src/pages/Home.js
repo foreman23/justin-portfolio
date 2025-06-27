@@ -71,6 +71,7 @@ const Home = ({ category, setCategory }) => {
                 
                 <div style={{ display: 'flex' }}>
                     <div className='category-container-lg'>
+                        <p className={`justin-title ${category === 'slides' ? 'justin-selected' : ''}`} onClick={() => setCategory('slides')}>Justin Zhao</p>
                         <p className={`category-title dropdown-title ${category === 'personal' ? 'category-selected' : ''}`} onClick={() => changeCategory('personal')}>personal</p>
                         {category === 'personal' &&
                             <ul className={`personal-list${isAnimatingOut ? ' fade-out' : ''}`}>

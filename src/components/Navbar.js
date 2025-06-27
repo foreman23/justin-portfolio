@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = ({ category, setCategory }) => {
     return (
-        <div className='navbar-container'>
+        <div className='navbar-container hidedesktop'>
             <div>
                 <p className={`justin-title ${category === 'slides' ? 'justin-selected' : ''}`} onClick={() => setCategory('slides')}>Justin Zhao</p>
             </div>
