@@ -97,6 +97,21 @@ body {
   /* border: 1px solid orange; */
 }
 
+.photo-container-lg {
+  width: 70vw;
+  display: flex;
+  margin-top: 10%;
+}
+
+.photo-container-lg img {
+  width: 60%;
+  height: 60vh;
+  object-fit: cover;
+  margin-left: 15%;
+  margin-top: 2%;
+  border: 3px solid grey
+}
+
 .video-wrapper {
   position: relative;
   width: 100%;

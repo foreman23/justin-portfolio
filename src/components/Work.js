@@ -15,7 +15,7 @@ const Work = (props) => {
                 ))}
             </div>
             {/* Desktop */}
-            <div className='personal-container-lg hidemobile'>
+            <div className='photo-container-lg hidemobile'>
                 {projectIndex !== undefined &&
                     <img alt={`workproject${projectIndex}_img`} src={works[projectIndex].url}></img>
                 }

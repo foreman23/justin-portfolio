@@ -15,7 +15,7 @@ const Photography = (props) => {
                 ))}
             </div>
             {/* Desktop */}
-            <div className='personal-container-lg hidemobile'>
+            <div className='photo-container-lg hidemobile'>
                 {projectIndex !== undefined &&
                     <img alt={`photoproject_${projectIndex}_img`} src={photos[projectIndex].url}></img>
                 }
