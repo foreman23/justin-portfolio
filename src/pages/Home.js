@@ -59,6 +59,7 @@ const Home = ({ category, setCategory }) => {
 
             {/* Desktop devices */}
             <div className='hidemobile'>
+                <p>hi</p>
 
                 <div style={{ display: 'flex' }}>
                     <div className='category-container-lg'>
