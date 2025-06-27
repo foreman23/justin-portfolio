@@ -32,11 +32,21 @@ body {
 .navbar-email-icon {
   width: 32px;
   min-height: auto;
+  transition: transform 0.15s ease-in-out;
+}
+
+.navbar-email-icon:hover {
+  transform: scale(1.05);
 }
 
 .navbar-ig-icon {
   width: 28px;
   min-height: auto;
+  transition: transform 0.15s ease-in-out;
+}
+
+.navbar-ig-icon:hover {
+  transform: scale(1.05);
 }
 
 .category-container {
@@ -210,28 +220,88 @@ body {
 
 .personal-list {
   margin: 0px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideInFade 0.25s ease-out forwards;
+}
+
+.personal-list.fade-out {
+  animation: slideOutFade 0.2s ease-in forwards;
+}
+
+@keyframes slideOutFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.personal-list li {
+  animation: staggeredFadeIn 0.4s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.1s;
+}
+
+@keyframes slideInFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes staggeredFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .project-unselected {
   cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  padding-left: 0px;
+  opacity: 0.85;
+}
+
+.project-unselected:hover {
+  padding-left: 4px;
+  opacity: 1;
 }
 
 .project-selected {
   text-decoration: underline;
   cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  padding-left: 4px;
+  opacity: 1;
 }
 
 .category-title {
   cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0.85;
 }
 
 .category-title:hover {
-  font-weight: bold;
+  opacity: 1;
 }
 
 .category-selected {
   font-weight: bold;
   margin-bottom: 0;
+  opacity: 1;
 }
 
 .justin-title {
@@ -248,4 +318,19 @@ body {
 
 .about-container img {
   margin-top: 30px;
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .personal-list,
+  .personal-list li,
+  .category-title,
+  .project-unselected,
+  .project-selected,
+  .navbar-email-icon,
+  .navbar-ig-icon {
+    animation: none;
+    transition: none;
+  }
+  
 }

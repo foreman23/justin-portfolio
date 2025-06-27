@@ -13,9 +13,18 @@ const Home = ({ category, setCategory }) => {
     const [currProject, setCurrProject] = useState(0);
     const [currWorkProject, setCurrWorkProject] = useState(0);
     const [currPhotoProject, setCurrPhotoProject] = useState(0);
+    const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-    const changeCategory = (category) => {
-        setCategory(category)
+    const changeCategory = (newCategory) => {
+        if (category !== newCategory && (category === 'personal' || category === 'work' || category === 'photography')) {
+            setIsAnimatingOut(true);
+            setTimeout(() => {
+                setCategory(newCategory);
+                setIsAnimatingOut(false);
+            }, 200);
+        } else {
+            setCategory(newCategory);
+        }
     }
 
     const selectPersonalProject = (index) => {
@@ -64,7 +73,7 @@ const Home = ({ category, setCategory }) => {
                     <div className='category-container-lg'>
                         <p className={`category-title dropdown-title ${category === 'personal' ? 'category-selected' : ''}`} onClick={() => changeCategory('personal')}>personal</p>
                         {category === 'personal' &&
-                            <ul className='personal-list'>
+                            <ul className={`personal-list${isAnimatingOut ? ' fade-out' : ''}`}>
                                 {projects.map((item, index) => (
                                     <li className={currProject === index ? 'project-selected' : 'project-unselected'} onClick={() => selectPersonalProject(index)} style={{ listStyle: 'none' }} key={`project_${index}`}>{item.title}</li>
                                 ))}
@@ -72,7 +81,7 @@ const Home = ({ category, setCategory }) => {
                         }
                         <p className={`category-title dropdown-title ${category === 'work' ? 'category-selected' : ''}`} onClick={() => changeCategory('work')}>work</p>
                         {category === 'work' &&
-                            <ul className='personal-list'>
+                            <ul className={`personal-list${isAnimatingOut ? ' fade-out' : ''}`}>
                                 {works.map((item, index) => (
                                     <li className={currWorkProject === index ? 'project-selected' : 'project-unselected'} onClick={() => selectWorkProject(index)} style={{ listStyle: 'none' }} key={`project_${index}`}>{item.title}</li>
                                 ))}
@@ -80,7 +89,7 @@ const Home = ({ category, setCategory }) => {
                         }
                         <p className={`category-title dropdown-title ${category === 'photography' ? 'category-selected' : ''}`} onClick={() => changeCategory('photography')}>photography</p>
                         {category === 'photography' &&
-                            <ul className='personal-list'>
+                            <ul className={`personal-list${isAnimatingOut ? ' fade-out' : ''}`}>
                                 {photos.map((item, index) => (
                                     <li className={currPhotoProject === index ? 'project-selected' : 'project-unselected'} onClick={() => selectPhotoProject(index)} style={{ listStyle: 'none' }} key={`project_${index}`}>{item.title}</li>
                                 ))}
