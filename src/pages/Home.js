@@ -59,8 +59,7 @@ const Home = ({ category, setCategory }) => {
 
             {/* Desktop devices */}
             <div className='hidemobile'>
-                <p>hi</p>
-
+                
                 <div style={{ display: 'flex' }}>
                     <div className='category-container-lg'>
                         <p className={`category-title dropdown-title ${category === 'personal' ? 'category-selected' : ''}`} onClick={() => changeCategory('personal')}>personal</p>
